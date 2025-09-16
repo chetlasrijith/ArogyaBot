@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ArogyaAI Design System - Healthcare AI Theme */
+
+@layer base {
+  :root {
+    /* Dark theme inspired by uploaded images */
+    --background: 220 13% 9%; /* Deep dark blue-gray */
+    --foreground: 0 0% 98%; /* Nearly white */
+
+    --card: 220 13% 12%; /* Slightly lighter than background */
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 13% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 217 91% 60%; /* Bright blue accent from images */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 13% 16%; /* Darker card variant */
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 9% 20%; /* Muted elements */
+    --muted-foreground: 220 9% 60%; /* Muted text */
+
+    --accent: 217 91% 60%; /* Same as primary for consistency */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 13% 20%; /* Subtle borders */
+    --input: 220 13% 16%;
+    --ring: 217 91% 60%; /* Blue focus ring */
+    
+    /* Healthcare-specific tokens */
+    --health-success: 142 76% 36%; /* Medical green */
+    --health-warning: 45 93% 58%; /* Medical amber */
+    --health-emergency: 0 84% 60%; /* Medical red */
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(220 13% 9%), hsl(220 13% 16%));
+    --gradient-card: linear-gradient(145deg, hsl(220 13% 12%), hsl(220 13% 16%));
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 70%));
+    --gradient-glass: linear-gradient(145deg, hsl(220 13% 12% / 0.8), hsl(220 13% 16% / 0.9));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(220 13% 5% / 0.3);
+    --shadow-strong: 0 8px 40px hsl(220 13% 5% / 0.5);
+    --shadow-glow: 0 0 30px hsl(217 91% 60% / 0.3);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Light mode (if needed later) */
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 220 13% 9%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 9%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 13% 96%;
+    --secondary-foreground: 220 13% 9%;
+    --muted: 220 13% 96%;
+    --muted-foreground: 220 9% 40%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground;
+  }
+}
+
+@layer components {
+  /* Glass morphism effect */
+  .glass {
+    background: hsl(var(--gradient-glass));
+    backdrop-filter: blur(16px);
+    border: 1px solid hsl(var(--border));
+  }
+
+  /* Gradient backgrounds */
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  /* Healthcare status colors */
+  .text-health-success {
+    color: hsl(var(--health-success));
+  }
+
+  .text-health-warning {
+    color: hsl(var(--health-warning));
+  }
+
+  .text-health-emergency {
+    color: hsl(var(--health-emergency));
+  }
+
+  /* Custom animations */
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-strong);
+  }
+}
