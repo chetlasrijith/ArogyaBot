@@ -17,8 +17,7 @@ export function Footer() {
               in every language, anytime, anywhere.
             </p>
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-              <Heart className="w-4 h-4 text-health-success" />
-              <span>Made with care for rural India</span>
+              <span>Made by Team Kaizen</span>
             </div>
           </div>
 
@@ -54,11 +53,11 @@ export function Footer() {
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-primary" />
-                <span className="text-muted-foreground">1800-AROGYA-AI</span>
+                <span className="text-muted-foreground">+91 70324 40444</span>
               </li>
               <li className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-primary" />
-                <span className="text-muted-foreground">Bhubaneswar, Odisha</span>
+                <span className="text-muted-foreground">Hyderabad, Telangana</span>
               </li>
             </ul>
           </div>
@@ -67,7 +66,7 @@ export function Footer() {
         <div className="border-t border-border mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-muted-foreground">
-              © 2024 ArogyaAI. All rights reserved.
+              © 2025 ArogyaAI. All rights reserved.
             </p>
             <p className="text-xs text-muted-foreground text-center md:text-right max-w-md">
               <strong>Disclaimer:</strong> ArogyaAI is for health awareness only and not a substitute for professional medical advice. 

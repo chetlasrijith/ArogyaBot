@@ -7,7 +7,13 @@ export function Navigation() {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <img src={arogyaLogo} alt="ArogyaAI Logo" className="w-8 h-8" />
-          <span className="text-xl font-bold text-foreground">ArogyaAI</span>
+          <span
+            className="text-xl font-bold text-foreground cursor-pointer"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            title="Go to top"
+          >
+            ArogyaAI
+          </span>
         </div>
         
         <div className="hidden md:flex items-center space-x-8">
@@ -25,9 +31,15 @@ export function Navigation() {
           </a>
         </div>
 
-        <Button variant="default" className="gradient-primary hover:opacity-90 transition-opacity">
-          Try ArogyaAI
-        </Button>
+        <a
+          href="https://wa.me/14155238886"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button>
+            Try ArogyaAI
+          </Button>
+        </a>
       </div>
     </nav>
   );

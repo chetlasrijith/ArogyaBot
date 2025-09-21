@@ -27,11 +27,22 @@ export function CTASection() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="gradient-primary hover:opacity-90 transition-opacity group">
-              Get Started with ArogyaAI
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button size="lg" variant="outline" className="hover-lift">
+            <a
+              href="https://wa.me/14155238886"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" className="gradient-primary hover:opacity-90 transition-opacity group">
+                Get Started with ArogyaAI
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
+            <Button
+              size="lg"
+              variant="outline"
+              className="hover-lift"
+              onClick={() => window.open('/coming-soon', '_blank')}
+            >
               Learn More
             </Button>
           </div>
